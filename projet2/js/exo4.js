@@ -1,31 +1,49 @@
 let random = Math.floor(Math.random()*101)
 let utilisateur = document.getElementById("input0")
-let boutton = document.getElementById("button")
-
-
-boutton.addEventListener("click",Valider)
-function Valider(){
-  for (let essai = 10;utilisateur != random; essai--){
-    document.getElementById("p3").innerHTML = "Le nombre d'essai est :" + essai
-    
-   /*  if(utilisateur < random){
-       document.getElementById("p2").innerHTML = "Trop bas"
-      essai--
-    } else if(utilisateur > random) {
-     alert("Trop haut")
-      essai--
+let form = document.getElementById("form")
+let essai = 10
+form.addEventListener("submit",Valider)
+function Valider(e){
+  let value = utilisateur.value 
+ /**Bloque le comportement par default */
+    e.preventDefault();
+  /** Récupère la valeur de l'input **/
+    if(value < random){
+       document.getElementById("p1").innerHTML = "Trop bas"
+       essai--
+      
+    } else if(value > random) {
+     document.getElementById("p1").innerHTML = "Trop haut"
+     essai--
+      
     } else{
-      document.getElementById("p2").innerHTML = "bravo"
+      document.getElementById("p2").innerHTML = "Bravo ! Vous avez trouvé le nombre !"
     }
-    if(essai === 1){
-      alert("derniere essai")
+    document.getElementById("p3").innerHTML = "le nombre d'essai est " + essai
+    if(essai == 1) 
+    {
+       alert("Derniere essai")
+    }  
+    if (essai == 0 )
+    {
+      alert("Game Over")
     }
-    if(essai === 0){
-      alert("Game over")
-       break
-    }* */
-    
-  }
-  return utilisateur
 }
-  /**/
+let rejouer = document.getElementById("boutton")
+rejouer.addEventListener("click",Refaire)
+function Refaire(){
+  if(essai == 0)
+ { 
+     let reset = confirm("veux tu réessayer?") 
+   if( reset == true)
+   {
+       essai = 11
+       document.getElementById("p3").innerHTML = "le nombre d'essai est " + essai
+   }
+ } 
+  else
+  {
+    return 0
+  }
+  
+}
