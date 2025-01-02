@@ -1,0 +1,23 @@
+.body{
+    background-color: rgb(99, 96, 96);
+}
+.h1{
+    color : rgb(145, 40, 40);
+}
+#input0{
+    width: 40%;
+    border: 2px solid orangered;
+}
+.rouge{
+    color: rgb(177, 39, 39);
+}
+.vert{
+    color: rgb(23, 115, 23);
+}
+.boutton{
+    border: 1px solid blue;
+    width: 20%;
+    color : white;
+    background-color: rgb(134, 12, 134);
+    padding: 10px;
+}
