@@ -1,0 +1,34 @@
+.body{
+    background-color: white;
+}
+.h1{
+    color : rgb(145, 40, 40);
+}
+#input0{
+    width: 40%;
+    border: 2px solid orangered;
+}
+.p1{
+    color: rgb(177, 39, 39);
+}
+.p2{
+    color: rgb(23, 115, 23);
+}
+.boutton{
+    border: 1px solid blue;
+    width: 20%;
+    color : white;
+    background-color: rgb(134, 12, 134);
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (max-width : 1000px) 
+{
+    .h1{
+        text-align: center;
+    }
+    .form{
+        text-align: center;
+    }
+}
