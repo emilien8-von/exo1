@@ -1,25 +1,31 @@
 let random = Math.floor(Math.random()*101)
-let essai = 10
-let utilisateur = confirm("etes vous pret ? ")
-while (utilisateur != random){
-  utilisateur = parseInt(prompt("Mettre un nombre entre 1 et 100 inclus :"))
-  console.log("le nombre d'essai " + essai)
-  
-  if(utilisateur < random){
-    alert("trop bas")
-    essai--
-  } else if(utilisateur > random) {
-    alert("Trop haut")
-    essai--
-  } else{
-    alert("bravo")
-  }
-  if(essai === 1){
-    alert("derniere essai")
-  }
-  if(essai === 0){
-    alert("Game over")
-     break
-  }
+let utilisateur = document.getElementById("input0")
+let boutton = document.getElementById("button")
 
+
+boutton.addEventListener("click",Valider)
+function Valider(){
+  for (let essai = 10;utilisateur != random; essai--){
+    document.getElementById("p3").innerHTML = "Le nombre d'essai est :" + essai
+    
+   /*  if(utilisateur < random){
+       document.getElementById("p2").innerHTML = "Trop bas"
+      essai--
+    } else if(utilisateur > random) {
+     alert("Trop haut")
+      essai--
+    } else{
+      document.getElementById("p2").innerHTML = "bravo"
+    }
+    if(essai === 1){
+      alert("derniere essai")
+    }
+    if(essai === 0){
+      alert("Game over")
+       break
+    }* */
+    
+  }
+  return utilisateur
 }
+  /**/
